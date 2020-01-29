@@ -2,11 +2,11 @@
 set -e
 
 function main() {
-    echo "Retagging and Pushing to Docker registry"
+    echo "Retagging and Pushing to Docker registry..."
 
-    sanitize "${INPUT_NAME}" "name"
-    sanitize "${INPUT_USERNAME}" "username"
-    sanitize "${INPUT_PASSWORD}" "password"
+    #sanitize "${INPUT_NAME}" "name"
+    #sanitize "${INPUT_USERNAME}" "username"
+    #sanitize "${INPUT_PASSWORD}" "password"
 
     # docker login
     echo ${INPUT_PASSWORD} | docker login -u ${INPUT_USERNAME} --password-stdin ${INPUT_REGISTRY}
